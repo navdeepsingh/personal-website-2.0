@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

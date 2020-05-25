@@ -28,7 +28,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const BlogPosts = result.data.allMarkdownRemark.edges;
   BlogPosts.forEach(edge => {
-    console.log(edge.node.frontmatter.path);      
     createPage({
       path: edge.node.frontmatter.path,
       component: blogPostTemplate,

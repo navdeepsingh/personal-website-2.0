@@ -4,18 +4,18 @@ import { Link } from "gatsby"
 const Header = () => {
     return (
         <>
-            <ul>
+            <ul className="links">
                 <li>
-                    <Link to={'/'}>Home</Link>
+                    <Link to={'/about'}>about</Link>
                 </li>
                 <li>
-                    <Link to={'/blog'}>Blog</Link>
+                    <Link to={'/work'}>work</Link>
                 </li>
                 <li>
-                    <Link to={'/about'}>About</Link>
-                </li>
+                    <Link to={'/blog'}>blog</Link>
+                </li>                
                 <li>
-                    <Link to={'/contact'}>Contact</Link>
+                    <Link to={'/uses'}>uses</Link>
                 </li>
             </ul>
         </>

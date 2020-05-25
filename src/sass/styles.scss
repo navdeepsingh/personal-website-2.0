@@ -1,0 +1,82 @@
+:root {
+    --text-size-base: 24px;
+    --text-size-xlarge: 5rem;
+    --text-size-default: 1rem;
+    --text-size-large: 1.5rem;
+    --text-size-small: 0.75rem;
+    --text-size-xsmall: 0.58rem;
+    --text-size-medium: 1.25rem;
+}
+
+@import "reset.sass";
+@import "mixins.scss";
+
+body {
+    background-color: white;
+    font-size: var(--text-size-base);
+}
+
+h1 {
+    font-size: var(--text-size-xlarge);
+}
+
+p {
+    padding-top: 0.5em;
+    padding-bottom: 0.8em;
+}
+
+.body {
+    width: 80vw;
+    margin: 0 auto;
+    height: 100vh;    
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.links {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 1rem;
+    padding-right: 1rem;
+
+    li {
+        text-align: center;
+        padding-bottom: 0.8rem;
+    }    
+    
+}
+
+.title {
+    position: fixed;
+    left: -5rem;
+    top: 8.25rem; 
+    transform: rotate(-90deg);
+}
+
+.contact {
+    position: fixed;
+    right: -5rem;
+    bottom: 10rem;
+    transform: rotate(90deg);
+}
+
+
+.skills {
+    color: black;
+
+    li {
+        display: inline-block;
+        padding-right: 0.5rem;
+    }
+
+    span{
+        color: green;        
+    }
+}
