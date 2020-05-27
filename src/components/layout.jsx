@@ -8,6 +8,8 @@ const Layout = ({children}) => {
             <div className="body">
                 <Header />
                 {children}
+                <h2 className="title">Remote Web Developer</h2>
+                <a href="mailto:navdeep.er@gmail.com" className="contact">navdeep.er@gmail.com</a>
             </div>            
         </>
     )

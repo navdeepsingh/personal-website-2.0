@@ -3,10 +3,20 @@ import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 
 export default function Blog({ data }) {
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges: posts, group: tags } = data.allMarkdownRemark
   return (
     <Layout>      
       <section className="blog-posts">
+        <ul>
+          {
+            tags
+              .map(tagNode => {
+                return (
+                  <li><Link>{tagNode.tag} <small>{tagNode.totalCount}</small></Link></li>
+                )
+              })
+          }
+        </ul>
         {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
@@ -28,6 +38,10 @@ export default function Blog({ data }) {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      group(field: frontmatter___tags) {
+        tag: fieldValue
+        totalCount
+      }
       edges {
         node {
           excerpt(pruneLength: 250)

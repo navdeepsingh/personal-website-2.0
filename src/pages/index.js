@@ -40,9 +40,6 @@ const Home = () => {
                     <p>Interested in relocating me abroad?<br />
                     Feel free to contact me!</p>
                 </div>
-
-                <h2 className="title">Remote Web Developer</h2>
-                <a href="mailto:navdeep.er@gmail.com" className="contact">navdeep.er@gmail.com</a>
             </section>
         </Layout> 
     )
