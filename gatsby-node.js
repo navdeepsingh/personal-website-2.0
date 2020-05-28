@@ -3,8 +3,9 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
+  const blogListTemplate = path.resolve(`src/templates/blogList.js`)
   const blogPostTemplate = path.resolve(`src/templates/blogPost.js`)
-  const blogTagTemplate = path.resolve("src/templates/blogTag.js")
+  const blogTagTemplate = path.resolve(`src/templates/blogTag.js`)
 
   const result = await graphql(`
     {
@@ -14,11 +15,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         edges {
           node {
-            fields {
-              slug
-            }
             frontmatter {
               tags
+              path
             }
           }
         }
@@ -36,7 +35,26 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const blogPosts = result.data.postsRemark.edges;
+  
+  const blogPosts = result.data.postsRemark.edges
+  const postsPerPage = 10;
+  const numPages = Math.ceil(blogPosts.length / postsPerPage)
+
+  // Make blog list pages with pagination
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: blogListTemplate,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+
+  // Make blog posts pages
   blogPosts.forEach(edge => {
     createPage({
       path: edge.node.frontmatter.path,

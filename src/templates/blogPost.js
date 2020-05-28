@@ -7,7 +7,7 @@ export default function Template({ data }) {
   const { markdownRemark: post } = data
   return (
     <Layout>
-      <section className="blog-post-container">
+      <section>
         <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
         <div className="blog-post">
           <h1>{post.frontmatter.title}</h1>
