@@ -6,22 +6,25 @@
 
 module.exports = {
   // previous setup
-  plugins: [
-    "gatsby-plugin-netlify-cms",
+  plugins: [    
     "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-netlify-cms-paths",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/writings/`,
-        name: "blog",
+        path: `${__dirname}/_posts`,
+        name: "markdown-posts",
       },
     },
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [], // just in case those previously mentioned remark plugins sound cool :)
+        plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
+        ],
       },
     },
   ],
