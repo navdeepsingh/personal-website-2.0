@@ -10,12 +10,14 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
-    "gatsby-plugin-netlify-cms",
+    {
+      resolve: `gatsby-plugin-netlify-cms`
+    },
     "gatsby-plugin-netlify-cms-paths",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/writings`,
+        path: `${__dirname}/blog`,
         name: "markdown-posts",
       },
     },
