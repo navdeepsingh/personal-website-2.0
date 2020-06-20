@@ -32,11 +32,15 @@ p {
 }
 
 section {
-    height: 100vh;
+    
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+
+    &.home {
+        height: 100vh;
+    }
 }
 
 .links {
@@ -78,5 +82,17 @@ section {
 
     span{
         color: green;        
+    }
+}
+
+//############## About Styles ###############/
+
+//############## Uses Styles ###############/
+.uses {
+    display: flex;
+    flex-wrap: wrap;
+    
+    div {
+        flex-basis: 33%;
     }
 }

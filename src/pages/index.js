@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 const Home = () => {
     return (        
         <Layout>
-            <section>
+            <section className="home">
                 <div className="introduction">
                     <h1>Navdeep Singh</h1>
                     <p>I’m a full stack developer and a self-taught front end developer living in Amritsar, India. 
