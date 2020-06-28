@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   
   const blogPosts = result.data.postsRemark.edges
-  const postsPerPage = 10;
+  const postsPerPage = 2;
   const numPages = Math.ceil(blogPosts.length / postsPerPage)
 
   // Make blog list pages with pagination
