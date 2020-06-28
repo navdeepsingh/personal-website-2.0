@@ -7,3 +7,5 @@ thumbnail: frontpage_banner_upper_small.jpg
 tag: general
 ---
 Test Post
+
+![Test Image Alt Text](frontpage_banner_upper_small.jpg "Test Image Title")
