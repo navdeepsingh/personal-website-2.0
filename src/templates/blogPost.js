@@ -9,6 +9,7 @@ export default function Template({ data }) {
     <Layout>
       <section>
         <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
+        <small>{post.frontmatter.tag}</small>
         <div className="blog-post">
           <h1>{post.frontmatter.title}</h1>
           <div
@@ -28,6 +29,10 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        thumbnail {
+          relativePath
+        }
+        tag
       }
     }
   }

@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 
 export default class BlogList extends React.Component {
   render() {
-    const { edges: posts } = this.props.data.allMarkdownRemark
+    const { edges: posts } = this.props.data.allMarkdownRemark;
+    const { prev, next } = this.props.pageContext;  
     return (
       <Layout>          
          {posts
@@ -15,11 +16,21 @@ export default class BlogList extends React.Component {
                 <h1>
                   <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
                 </h1>
+                <small>{post.frontmatter.tag}</small>
                 <h2>{post.frontmatter.date}</h2>
                 <p>{post.excerpt}</p>
               </div>
             )
           })}
+          <div className="pagination">
+            <div>
+              {prev && <Link to={`${prev}`} rel="prev"> ← Last </Link>}
+            </div>
+
+            <div style={{ justifySelf: 'flex-end' }}>
+              {next && <Link to={`${next}`} rel="next"> Next → </Link>}
+            </div>
+          </div>
       </Layout>
     )
   }
@@ -37,9 +48,10 @@ export const blogListQuery = graphql`
                 excerpt(pruneLength: 250)
                 id
                 frontmatter {
-                path  
-                title
-                date(formatString: "MMMM DD, YYYY")
+                  path  
+                  title
+                  date(formatString: "MMMM DD, YYYY")
+                  tag
                 }
             }
         }

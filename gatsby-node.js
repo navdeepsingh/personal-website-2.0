@@ -49,6 +49,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
+        prev: i === 0 ? null : (i === 1 ? `/blog` : `/blog/${i}`),
+        next: i === numPages-1 ? null : `/blog/${i + 2}`,
       },
     })
   })
