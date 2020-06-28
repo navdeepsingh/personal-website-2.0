@@ -9,24 +9,68 @@
 }
 
 @import "reset.sass";
+@import "colors.scss";
 @import "mixins.scss";
 
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/Karla-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ArchivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf") format("truetype");
+}
+
 body {
-    background-color: white;
+    background-color: $base;
     font-size: var(--text-size-base);
+    font-family: "Karla", Arial, Helvetica, sans-serif;
+    color: $cyan;
+    position: relative;
+    
+    &::before {
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 0.6em;
+        background-image: radial-gradient($yellow 40%, transparent 0%);
+        background-size: 5px 5px;
+        margin-bottom: 0.7rem;
+        position: absolute;
+        top:0;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 0.6em;
+        background-image: radial-gradient($yellow 40%, transparent 0%);
+        background-size: 5px 5px;
+        margin-bottom: 0.7rem;
+        bottom: 0;
+    }
+    
 }
 
 h1 {
     font-size: var(--text-size-xlarge);
+    font-family: "ArchivoBlack", Arial, Helvetica, sans-serif;
+    color: $yellow;
 }
 
 p {
     padding-top: 0.5em;
     padding-bottom: 0.8em;
+    line-height: 1.4em;
+}
+
+a {
+    color: $green;;
 }
 
 .body {
-    width: 80vw;
+    width: 60vw;
     margin: 0 auto;
     height: 100vh;    
 }
@@ -47,7 +91,7 @@ section {
     position: fixed;
     right: 0;
     top: 0;
-    padding-top: 1rem;
+    padding-top: 2em;
     padding-right: 1rem;
 
     li {
@@ -60,7 +104,7 @@ section {
 .title {
     position: fixed;
     left: -5rem;
-    top: 8.25rem; 
+    top: 6.5em; 
     transform: rotate(-90deg);
 }
 
@@ -73,7 +117,7 @@ section {
 
 
 .skills {
-    color: black;
+    color: white;
 
     li {
         display: inline-block;
@@ -81,7 +125,8 @@ section {
     }
 
     span{
-        color: green;        
+        color: $yellow; 
+        font-weight: 900;       
     }
 }
 
