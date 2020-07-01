@@ -39,6 +39,7 @@ const Home = () => {
                 <div>
                     <p>Interested in relocating me abroad?<br />
                     Feel free to contact me!</p>
+                    <a href="" className="bold">View my resume</a>
                 </div>
             </section>
         </Layout> 

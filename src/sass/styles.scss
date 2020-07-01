@@ -1,4 +1,6 @@
 :root {
+    --main-text-width-wide: 900px;
+
     --text-size-base: 24px;
     --text-size-xlarge: 5rem;
     --text-size-default: 1rem;
@@ -31,7 +33,7 @@ body {
     &::before {
         content: "";
         display: block;
-        width: 100vw;
+        width: 100%;
         height: 0.6em;
         background-image: radial-gradient($yellow 40%, transparent 0%);
         background-size: 5px 5px;
@@ -43,11 +45,10 @@ body {
         content: "";
         display: block;
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 0.6em;
         background-image: radial-gradient($yellow 40%, transparent 0%);
         background-size: 5px 5px;
-        margin-bottom: 0.7rem;
         bottom: 0;
     }
     
@@ -57,6 +58,7 @@ h1 {
     font-size: var(--text-size-xlarge);
     font-family: "ArchivoBlack", Arial, Helvetica, sans-serif;
     color: $yellow;
+    
 }
 
 p {
@@ -66,23 +68,42 @@ p {
 }
 
 a {
-    color: $green;;
+    color: $green;
+
+    &.bold {
+        display: inline-block;
+        background-color: $green;
+        color: black;
+        padding: 0.2em 0.8em;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+        &:hover {
+            text-decoration: none;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+   
 }
 
 .body {
-    width: 60vw;
+    width: var(--main-text-width-wide);
+    max-width: 80vw;
     margin: 0 auto;
-    height: 100vh;    
 }
 
+
 section {
-    
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
 
     &.home {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;        
         height: 100vh;
     }
 }
@@ -118,6 +139,7 @@ section {
 
 .skills {
     color: white;
+    line-height: 1.4em;    
 
     li {
         display: inline-block;
@@ -134,10 +156,34 @@ section {
 
 //############## Uses Styles ###############/
 .uses {
-    display: flex;
-    flex-wrap: wrap;
-    
-    div {
-        flex-basis: 33%;
-    }
+    padding-top: 100px;
+    &-listing {
+        display: flex;
+        flex-wrap: wrap;
+        
+        > div {
+            flex-basis: 33%;
+            margin-bottom: 0.8em;;
+            h2 {
+                color: $red;
+            }
+            ul {
+                padding-top: 0.8em;
+                li {
+                    font-size: var(--text-size-default);
+                    padding-bottom: 0.8em;
+                    display: flex;                    
+
+                    span {
+                        padding-right: 0.8em;
+                    }
+                    
+                }
+            }
+        }
+    }    
+}
+
+.blog {
+    padding: 100px 0 100px 0;
 }

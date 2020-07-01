@@ -7,7 +7,8 @@ export default class BlogList extends React.Component {
     const { edges: posts } = this.props.data.allMarkdownRemark;
     const { prev, next } = this.props.pageContext;  
     return (
-      <Layout>          
+      <Layout> 
+        <section className="blog">
          {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
@@ -31,6 +32,7 @@ export default class BlogList extends React.Component {
               {next && <Link to={`${next}`} rel="next"> Next → </Link>}
             </div>
           </div>
+          </section>
       </Layout>
     )
   }
