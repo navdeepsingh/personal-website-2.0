@@ -69,6 +69,7 @@ p {
 
 a {
     color: $green;
+    text-decoration: none;
 
     &.bold {
         display: inline-block;
@@ -85,7 +86,7 @@ a {
     }
 
     &:hover {
-        text-decoration: none;
+        text-decoration: underline;
     }
    
 }

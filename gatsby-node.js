@@ -5,7 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const blogListTemplate = path.resolve(`src/templates/blogList.js`)
   const blogPostTemplate = path.resolve(`src/templates/blogPost.js`)
-  //const blogTagTemplate = path.resolve(`src/templates/blogTag.js`)
+  const blogTagTemplate = path.resolve(`src/templates/blogTag.js`)
 
   const result = await graphql(`
     {
@@ -26,6 +26,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                 }
             }
         }
+      tags: allMarkdownRemark {
+        distinct(field: frontmatter___tag)
+      }
     }
   `)
 
@@ -65,15 +68,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 
   // // Extract tag data from query
-  // const blogTags = result.data.tagsGroup.group
-  // // Make tag pages
-  // blogTags.forEach(tag => {
-  //   createPage({
-  //     path: `/tags/${tag.fieldValue}/`,
-  //     component: blogTagTemplate,
-  //     context: {
-  //       tag: tag.fieldValue,
-  //     },
-  //   })
-  // })
+  const blogTags = result.data.tags.distinct
+  // Make tag pages
+  blogTags.forEach(tag => {
+    createPage({
+      path: `/tags/${tag}/`,
+      component: blogTagTemplate,
+      context: {
+        tag: tag,
+      },
+    })
+  })
 }

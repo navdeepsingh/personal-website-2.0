@@ -5,10 +5,22 @@ import Layout from "../components/layout"
 export default class BlogList extends React.Component {
   render() {
     const { edges: posts } = this.props.data.allMarkdownRemark;
+    const { group: tags } = this.props.data.tags;
     const { prev, next } = this.props.pageContext;  
     return (
       <Layout> 
         <section className="blog">
+          <div>
+            <ul className="tags-list">
+            {
+              tags.map(tag => {
+                return <li>
+                        <Link to={`tags/${tag.fieldValue}`}>{tag.fieldValue.toUpperCase()} <small>{tag.totalCount}</small></Link>
+                      </li>
+              })
+            }
+            </ul>
+          </div>
          {posts
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
@@ -40,6 +52,12 @@ export default class BlogList extends React.Component {
 
 export const blogListQuery = graphql`
   query blogListNewQuery($skip: Int!, $limit: Int!) {
+    tags: allMarkdownRemark {
+      group(field: frontmatter___tag) {      
+        totalCount
+        fieldValue        
+      }
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit

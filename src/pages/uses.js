@@ -66,7 +66,7 @@ const Uses = () => {
                         <h2>Fixation</h2>
                         <ul>
                             <li><span role="img" aria-label="Sleep">💤</span> Sleep</li>
-                            <li><span role="img" aria-label="Running &amp; Cycling">🏃</span> <div>Running &amp; Cycling <p>Follow me on <a href="https://www.strava.com/athletes/10591878" target="_blank" rel="noreferrer" title="Open Strava in new window">Strava <img src="https://img.icons8.com/small/16/000000/external-link.png"/></a></p></div></li>
+                            <li><span role="img" aria-label="Running &amp; Cycling">🏃</span> <div>Running &amp; Cycling <p>Follow me on <a href="https://www.strava.com/athletes/10591878" target="_blank" rel="noreferrer" title="Open Strava in new window">Strava</a></p></div></li>
                             <li><span role="img" aria-label="Playing with my duo kidz">👨‍👦‍👦</span> Playing with my duo kidz</li>
                             <li><span role="img" aria-label="Yogurt">🥛</span> Yogurt</li>
                         </ul>
