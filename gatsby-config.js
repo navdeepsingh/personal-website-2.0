@@ -21,6 +21,8 @@ module.exports = {
         name: "markdown-posts",
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {

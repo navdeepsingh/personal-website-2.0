@@ -9,42 +9,48 @@ export default class BlogList extends React.Component {
     const { prev, next } = this.props.pageContext;  
     return (
       <Layout> 
-        <section className="blog">
-          <div>
-            <ul className="tags-list">
-            {
-              tags.map(tag => {
-                return <li>
-                        <Link to={`tags/${tag.fieldValue}`}>#{tag.fieldValue}</Link>
-                      </li>
-              })
-            }
-            </ul>
-          </div>
-         {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <div className="blog-post" key={post.id}>
-                <h1>
-                  <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                </h1>
-                <div className="blog-post__date">Published On: {post.frontmatter.date}</div>
-                <div className="blog-post__tag">#{post.frontmatter.tag}</div>                
-                <p>{post.excerpt}</p>
-              </div>
-            )
-          })}
-          <div className="pagination">
+        <section>
+          <div className="blog">
             <div>
-              {prev && <Link to={`${prev}`} rel="prev"> ← Last </Link>}
+              <h1>My Blog</h1>
+              <p>My personal space to write down my learnings about life, general and technical subjects.</p>
             </div>
+            <div>
+              <ul className="tags-list">
+              {
+                tags.map(tag => {
+                  return <li>
+                          <Link to={`tags/${tag.fieldValue}`}>#{tag.fieldValue}</Link>
+                        </li>
+                })
+              }
+              </ul>
+            </div>
+          {posts
+            .filter(post => post.node.frontmatter.title.length > 0)
+            .map(({ node: post }) => {
+              return (
+                <div className="blog-post" key={post.id}>
+                  <h1>
+                    <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                  </h1>
+                  <div className="blog-post__date">Published On: {post.frontmatter.date}</div>
+                  <div className="blog-post__tag">#{post.frontmatter.tag}</div>                
+                  <p>{post.excerpt}</p>
+                </div>
+              )
+            })}
+            <div className="pagination">
+              <div>
+                {prev && <Link to={`${prev}`} rel="prev"> ← Last </Link>}
+              </div>
 
-            <div style={{ justifySelf: 'flex-end' }}>
-              {next && <Link to={`${next}`} rel="next"> Next → </Link>}
+              <div style={{ justifySelf: 'flex-end' }}>
+                {next && <Link to={`${next}`} rel="next"> Next → </Link>}
+              </div>
             </div>
           </div>
-          </section>
+        </section>
       </Layout>
     )
   }

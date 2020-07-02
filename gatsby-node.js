@@ -15,13 +15,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
             edges {
                 node {
-                    excerpt(pruneLength: 250)
-                    html
                     id
                     frontmatter {
-                        date
-                        path
-                        title
+                      date
+                      path
+                      title
+                      thumbnail {                        
+                        publicURL
+                      }
                     }
                 }
             }
@@ -39,7 +40,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   
   const blogPosts = result.data.postsRemark.edges
-  const postsPerPage = 2;
+  const postsPerPage = 3;
   const numPages = Math.ceil(blogPosts.length / postsPerPage)
 
   // Make blog list pages with pagination
@@ -63,7 +64,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: {
+        bannerImage: node.frontmatter.thumbnail.publicURL 
+      }, // additional data can be passed via context
     })
   })
 

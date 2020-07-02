@@ -14,8 +14,9 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <section className="blog">
-        <h1 className="tag-header">{tagHeader}</h1>
+      <section>
+        <div className="blog">
+          <h1 className="tag-header">{tagHeader}</h1>
           {edges.map(({ node }) => {            
             const { title, path, date, tag} = node.frontmatter;
             return (              
@@ -28,7 +29,8 @@ const Tags = ({ pageContext, data }) => {
                 <p>{node.excerpt}</p>
               </div>
               )
-            })} 
+            })}
+        </div> 
       </section>
     </Layout>
   )
