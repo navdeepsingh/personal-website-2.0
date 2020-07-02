@@ -8,25 +8,27 @@ import { Link, graphql } from "gatsby"
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
+  const tagHeader = `#${tag}: ${totalCount} post${
     totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  }`
 
   return (
     <Layout>
-      <section>
-        <h1>{tagHeader}</h1>
-        <ul>
-          {edges.map(({ node }) => {
-            //const { slug } = node.fields
-            const { title, path } = node.frontmatter
-            return (
-              <li>
-                <Link to={path}>{title}</Link>
-              </li>
-            )
-          })}
-        </ul>      
+      <section className="blog">
+        <h1 className="tag-header">{tagHeader}</h1>
+          {edges.map(({ node }) => {            
+            const { title, path, date, tag} = node.frontmatter;
+            return (              
+              <div className="blog-post" key={node.id}>
+                <h1>
+                  <Link to={path}>{title}</Link>
+                </h1>
+                <div className="blog-post__date">Published On: {date}</div>
+                <div className="blog-post__tag">#{tag}</div>                
+                <p>{node.excerpt}</p>
+              </div>
+              )
+            })} 
       </section>
     </Layout>
   )
@@ -65,8 +67,13 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
+          excerpt(pruneLength: 250)
           frontmatter {
+            path  
             title
+            date(formatString: "MMMM DD, YYYY")
+            tag
           }
         }
       }

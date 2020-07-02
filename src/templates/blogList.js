@@ -15,7 +15,7 @@ export default class BlogList extends React.Component {
             {
               tags.map(tag => {
                 return <li>
-                        <Link to={`tags/${tag.fieldValue}`}>{tag.fieldValue.toUpperCase()} <small>{tag.totalCount}</small></Link>
+                        <Link to={`tags/${tag.fieldValue}`}>#{tag.fieldValue}</Link>
                       </li>
               })
             }
@@ -25,12 +25,12 @@ export default class BlogList extends React.Component {
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
             return (
-              <div className="blog-post-preview" key={post.id}>
+              <div className="blog-post" key={post.id}>
                 <h1>
                   <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
                 </h1>
-                <small>{post.frontmatter.tag}</small>
-                <h2>{post.frontmatter.date}</h2>
+                <div className="blog-post__date">Published On: {post.frontmatter.date}</div>
+                <div className="blog-post__tag">#{post.frontmatter.tag}</div>                
                 <p>{post.excerpt}</p>
               </div>
             )

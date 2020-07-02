@@ -39,7 +39,7 @@ const Home = () => {
                 <div>
                     <p>Interested in relocating me abroad?<br />
                     Feel free to contact me!</p>
-                    <a href="https://drive.google.com/file/d/1HIIKPcry61fri8OjUPotTgVqAX_AJ_R-/view?usp=sharing" target="_blank" rel="noreferrer" className="bold">View my resume</a>
+                    <a href="https://drive.google.com/file/d/1HIIKPcry61fri8OjUPotTgVqAX_AJ_R-/view?usp=sharing" target="_blank" rel="noreferrer" className="glow-on-hover">View my resume</a>
                 </div>
             </section>
         </Layout> 
