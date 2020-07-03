@@ -14,23 +14,21 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <section>
-        <div className="blog">
-          <h1 className="tag-header">{tagHeader}</h1>
-          {edges.map(({ node }) => {            
-            const { title, path, date, tag} = node.frontmatter;
-            return (              
-              <div className="blog-post" key={node.id}>
-                <h1>
-                  <Link to={path}>{title}</Link>
-                </h1>
-                <div className="blog-post__date">Published On: {date}</div>
-                <div className="blog-post__tag">#{tag}</div>                
-                <p>{node.excerpt}</p>
-              </div>
-              )
-            })}
-        </div> 
+      <section className="blog">
+        <h1 className="tag-header">{tagHeader}</h1>
+        {edges.map(({ node }) => {            
+          const { title, path, date, tag} = node.frontmatter;
+          return (              
+            <div className="blog-post" key={node.id}>
+              <h1>
+                <Link to={path}>{title}</Link>
+              </h1>
+              <div className="blog-post__date">Published On: {date}</div>
+              <div className="blog-post__tag">#{tag}</div>                
+              <p>{node.excerpt}</p>
+            </div>
+            )
+          })}
       </section>
     </Layout>
   )

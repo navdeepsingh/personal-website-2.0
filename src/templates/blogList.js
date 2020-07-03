@@ -9,8 +9,7 @@ export default class BlogList extends React.Component {
     const { prev, next } = this.props.pageContext;  
     return (
       <Layout> 
-        <section>
-          <div className="blog">
+        <section className="blog">          
             <div>
               <h1>My Blog</h1>
               <p>My personal space to write down my learnings about life, general and technical subjects.</p>
@@ -48,8 +47,7 @@ export default class BlogList extends React.Component {
               <div style={{ justifySelf: 'flex-end' }}>
                 {next && <Link to={`${next}`} rel="next"> Next → </Link>}
               </div>
-            </div>
-          </div>
+            </div>          
         </section>
       </Layout>
     )

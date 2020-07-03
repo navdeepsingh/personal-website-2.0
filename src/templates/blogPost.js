@@ -9,9 +9,8 @@ export default function Template({ data, pageContext }) {
   
   return (
     <Layout>
-      <section>
+      <section className="blog">
         <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />        
-        <div className="blog">
           <div className="blog-post">            
             <h1>{post.frontmatter.title}</h1>
             <div className="blog-post__date">Published On: {post.frontmatter.date}</div>
@@ -23,9 +22,7 @@ export default function Template({ data, pageContext }) {
               className="blog-post-content"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-
           </div>
-        </div>
       </section>
     </Layout>
   )
