@@ -1,7 +1,7 @@
 ---
 path: /blog/hello-world
 title: Hello World
-date: 2020-06-28T12:02:39.398Z
+date: 2016-04-08T12:02:00.000Z
 thumbnail: kobu-agency-67l18r4tw_w-unsplash.jpg
 tag: general
 ---
