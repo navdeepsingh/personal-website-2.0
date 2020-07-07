@@ -1,9 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 
-const Home = () => {
+const Home = () => {    
     return (        
         <Layout>
+            <Helmet>
+                <title>Navdeep Singh 👳 - Full Stack Developer</title>
+                <meta name="description" content="Welcome to my personal website." />
+                <meta property="og:type" content="website" />
+            </Helmet> 
             <section className="home">
                 <div className="introduction">
                     <h1>Navdeep Singh</h1>
@@ -26,7 +32,7 @@ const Home = () => {
                         <li><span>PHP</span>,</li>
                         <li><span>MySQL</span>,</li>
                         <li><span>Express</span>,</li>
-                        <li><span>Wordpress</span>,</li>
+                        <li><span>WordPress</span>,</li>
                         <li><span>Laravel</span>,</li>
                         <li><span>Gulp</span>,</li>
                         <li><span>jQuery</span>,</li>

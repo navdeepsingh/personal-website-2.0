@@ -28,7 +28,7 @@ const Uses = () => {
                                     <p>I've used windows too for professional use but settled now with Mac&#60;3</p>
                                 </div>    
                             </li>
-                            <li>mStand for Mac by <a href="https://www.raindesigninc.com/mstand.html" rel="noreferrer nopener" target="_blank">raindesign</a></li>
+                            <li><span role="img" aria-label="mStand for Mac by raindesigninc">💧</span> <span>mStand for Mac by <a href="https://www.raindesigninc.com/mstand.html" rel="noreferrer nopener" target="_blank">raindesign</a></span></li>
                             <li><span role="img" aria-label="HP 24es LED Monitor">🖥️</span> HP 24es LED Monitor</li>
                             <li><span role="img" aria-label="GoPro Black 7">📷</span> GoPro Black 7</li>
                             <li><span role="img" aria-label="Xiomi Mi A2 Phone">📱</span> Xiomi Mi A2 Phone</li>

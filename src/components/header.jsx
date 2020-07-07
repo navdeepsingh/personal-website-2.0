@@ -3,19 +3,19 @@ import { Link } from "gatsby"
 
 const Header = () => {
     return (
-        <>
+        <nav aria-label="Primary">
             <ul className="links">
                 <li>
-                    <Link to={'/'}>about</Link>
+                    <Link to={'/'}>About</Link>
                 </li>                
                 <li>
-                    <Link to={'/blog'}>blog</Link>
+                    <Link to={'/blog'}>Blog</Link>
                 </li>                
                 <li>
-                    <Link to={'/uses'}>uses</Link>
+                    <Link to={'/uses'}>Uses</Link>
                 </li>
             </ul>
-        </>
+        </nav>
     )
 }
 

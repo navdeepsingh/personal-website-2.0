@@ -148,10 +148,11 @@ a {
 
 section {
     min-height: 100vh;
-    padding-top: 100px;
+    padding: 100px 0;
 
     &.home {
         display: flex;
+        padding: 0;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column; 
@@ -166,8 +167,8 @@ section {
     padding-right: 1rem;
 
     li {
-        text-align: center;
-        padding-bottom: 0.8rem;
+        text-align: right;
+        padding-bottom: 1em;
     }    
     
 }
@@ -189,7 +190,8 @@ section {
 
 .skills {
     color: white;
-    line-height: 1.4em;    
+    line-height: 1.4em;  
+    font-family: "Karla";  
 
     li {
         display: inline-block;
@@ -337,6 +339,14 @@ section {
 
         .skills {
             font-size: var(--text-size-medium);
+        }
+    }
+
+    .uses {    
+        &-listing {
+            > div {
+                flex-basis: 100%;
+            }
         }
     }
 }
