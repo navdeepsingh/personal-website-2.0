@@ -3,23 +3,26 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+      cmsConfig: `/static/admin/config.yml`,
+  },
+}
 
 module.exports = {
   // previous setup
   plugins: [    
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-plugin-netlify-cms`
-    },
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          `gatsby-plugin-netlify-cms-paths`,
+          netlifyCmsPaths,
           {
             resolve: `gatsby-remark-images`,
             options: {
