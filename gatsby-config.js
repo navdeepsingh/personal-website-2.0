@@ -28,6 +28,19 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-plugin-netlify-cms-paths`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+                maxWidth: 1026,
+                linkImagesToOriginal: true,
+            },
+          },
+          {
+            resolve: `gatsby-plugin-netlify-cms`,
+            options: {
+                enableIdentityWidget: true,
+            },
+          },
         ],
       },
     },
