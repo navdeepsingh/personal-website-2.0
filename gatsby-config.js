@@ -13,14 +13,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-cms`
     },
-    "gatsby-plugin-netlify-cms-paths",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/blog`,
-        name: "markdown-posts",
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -39,6 +31,13 @@ module.exports = {
             resolve: `gatsby-plugin-netlify-cms`,
             options: {
                 enableIdentityWidget: true,
+            },
+          },
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              path: `${__dirname}/blog`,
+              name: "markdown-posts",
             },
           },
         ],
