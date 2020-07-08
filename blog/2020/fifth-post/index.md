@@ -19,7 +19,7 @@ TLDR;
 <u>7 May</u>
 With the full enthusiasm and excitement the Google I/O Keynote is started by Sundar Pichai (CEO of Google) of about 2 hours and followed by Developer Keynote.
 
-![Google I/O - May 7](IMG_20190507_102419-COLLAGE.jpg)
+![Google I/O - May 7](.././assets/IMG_20190507_102419-COLLAGE.jpg)
 
 The areas covered in Keynotes are Search, Google Lens, Duplex for the Web, Assistant, Privacy, Accessibility, Android, Hardware Updates, Developer Updates. For a quick overview, read [Harshit’s post](https://heartbeat.fritz.ai/google-i-o-2019-in-8-minutes-6b5d86b0a241).
 
@@ -46,7 +46,7 @@ Web
 
 After lunch having Spicy La Paz Wrap (vegan, dairy free) yeah it was delicious and later spent time at Community Lounge and communicated with various GDG Organizers from various corners of world like Egypt, Turkey, Uzbekistan, Nepal and on asking different questions to them got the swag (stickers) as present.
 
-![Google I/O - May 7](IMG_20190507_140008-COLLAGE.jpg)
+![Google I/O - May 7](.././IMG_20190507_140008-COLLAGE.jpg)
 
 Then after, Visited Office Hours for App reviews directly from Googlers.  I discussed about my current google action `Hey Google, Open Cool Science Quiz` and come to know about Conversation design process, which is mandatory before developing any Google Action. 
 The sessions I attended:
