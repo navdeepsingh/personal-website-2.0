@@ -43,6 +43,13 @@ module.exports = {
               name: "markdown-posts",
             },
           },
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              path: `${__dirname}/static/assets`,
+              name: "markdown-assets",
+            },
+          },
         ],
       },
     },
