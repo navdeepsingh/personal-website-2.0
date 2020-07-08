@@ -19,7 +19,7 @@ TLDR;
 <u>7 May</u>
 With the full enthusiasm and excitement the Google I/O Keynote is started by Sundar Pichai (CEO of Google) of about 2 hours and followed by Developer Keynote.
 
-![Google I/O - May 7](./assets/IMG_20190507_102419-COLLAGE.jpg)
+![Google I/O - May 7](/assets/IMG_20190507_102419-COLLAGE.jpg)
 
 The areas covered in Keynotes are Search, Google Lens, Duplex for the Web, Assistant, Privacy, Accessibility, Android, Hardware Updates, Developer Updates. For a quick overview, read [Harshit’s post](https://heartbeat.fritz.ai/google-i-o-2019-in-8-minutes-6b5d86b0a241).
 
@@ -46,7 +46,7 @@ Web
 
 After lunch having Spicy La Paz Wrap (vegan, dairy free) yeah it was delicious and later spent time at Community Lounge and communicated with various GDG Organizers from various corners of world like Egypt, Turkey, Uzbekistan, Nepal and on asking different questions to them got the swag (stickers) as present.
 
-![Google I/O - May 7](./assets/IMG_20190507_140008-COLLAGE.jpg){:class="img-responsive"}
+![Google I/O - May 7](/assets/IMG_20190507_140008-COLLAGE.jpg)
 
 Then after, Visited Office Hours for App reviews directly from Googlers.  I discussed about my current google action `Hey Google, Open Cool Science Quiz` and come to know about Conversation design process, which is mandatory before developing any Google Action. 
 The sessions I attended:
@@ -56,7 +56,7 @@ The sessions I attended:
 * [Machine Learning Zero to Hero](https://www.youtube.com/watch?v=VwVg9jCtqaU)
 * [Let’s Talk: Designing Quality Conversations for the Google Assistant](https://www.youtube.com/watch?v=ZRjkSqVedfY)
 
-![Google I/O - May 7](./assets/IMG_20190507_165754.jpg){:class="img-responsive"} 
+![Google I/O - May 7](/assets/IMG_20190507_165754.jpg){:class="img-responsive"} 
 
 Also attended Sandbox of Google Assistant, yes that big golf balls looking are Sanboxes areas where Google showcasing their latest innovations and developments.
 
@@ -66,7 +66,7 @@ Also attended Sandbox of Google Assistant, yes that big golf balls looking are S
 </div>
 
 And later at night, had my dinner and attended Digital Detox Session Hall with mind blowing dance performances. 
-![Google I/O - May 7](./assets/IMG_20190507_193955-COLLAGE.jpg){:class="img-responsive"} 
+![Google I/O - May 7](/assets/IMG_20190507_193955-COLLAGE.jpg){:class="img-responsive"} 
 
 <u>8 May</u><br>
 
@@ -81,7 +81,7 @@ Things did this day:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">This is innovation at its peak! Look at the fruit balloons and listen to the sounds. <a href="https://twitter.com/hashtag/io19?src=hash&ref_src=twsrc%5Etfw">#io19</a> <a href="https://twitter.com/theflaminglips?ref_src=twsrc%5Etfw">@theflaminglips</a> <a href="https://t.co/VlNl9Mu2Xy">pic.twitter.com/VlNl9Mu2Xy</a></p>&mdash; Rohan Taneja (@rohantaneja_) <a href="https://twitter.com/rohantaneja_/status/1126344275204009984?ref_src=twsrc%5Etfw">May 9, 2019</a></blockquote>
 </div>
 
-![Google I/O - May 8](./assets/IMG_20190508_111628-COLLAGE.jpg){:class="img-responsive"} 
+![Google I/O - May 8](/assets/IMG_20190508_111628-COLLAGE.jpg){:class="img-responsive"} 
 
 <u>9 May:</u><br>
 Its wrap-up day, completed my all code labs and collected one of last 4th sticker from [Jessica](https://twitter.com/chatasweetie) and put in my card into lucky draw box, to get I/O ticket for next year.
@@ -97,4 +97,4 @@ What I learnt is "`Doing is the Mantra`” because when you start doing stuff, c
 
 Wish me best of luck for next year Google I/O 2020.
 
-![Google I/O - May 9](./assets/IMG_20190509_100901-ANIMATION.gif)
+![Google I/O - May 9](/assets/IMG_20190509_100901-ANIMATION.gif)
