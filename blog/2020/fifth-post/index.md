@@ -18,7 +18,7 @@ TLDR;
 
 7 May With the full enthusiasm and excitement the Google I/O Keynote is started by Sundar Pichai (CEO of Google) of about 2 hours and followed by Developer Keynote.
 
-![Attending Google I/O 2019 Insights](img_20190507_102419-collage.jpg "Attending Google I/O 2019 Insights")
+![Attending Google I/O 2019 Insights](assets/img_20190507_102419-collage.jpg "Attending Google I/O 2019 Insights")
 
 The areas covered in Keynotes are Search, Google Lens, Duplex for the Web, Assistant, Privacy, Accessibility, Android, Hardware Updates, Developer Updates. For a quick overview, read[Harshit’s post](https://heartbeat.fritz.ai/google-i-o-2019-in-8-minutes-6b5d86b0a241).
 
