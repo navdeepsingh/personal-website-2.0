@@ -46,7 +46,7 @@ Web
 
 After lunch having Spicy La Paz Wrap (vegan, dairy free) yeah it was delicious and later spent time at Community Lounge and communicated with various GDG Organizers from various corners of world like Egypt, Turkey, Uzbekistan, Nepal and on asking different questions to them got the swag (stickers) as present.
 
-![Google I/O - May 7](/assets/IMG_20190507_140008-COLLAGE.jpg){:class="img-responsive"}
+![Google I/O - May 7](./assets/IMG_20190507_140008-COLLAGE.jpg){:class="img-responsive"}
 
 Then after, Visited Office Hours for App reviews directly from Googlers.  I discussed about my current google action `Hey Google, Open Cool Science Quiz` and come to know about Conversation design process, which is mandatory before developing any Google Action. 
 The sessions I attended:
