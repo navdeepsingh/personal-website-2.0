@@ -18,8 +18,8 @@ export default function Template({ data, pageContext }) {
             <div className="blog-post__banner">              
               <Img fluid={banner.childImageSharp.fluid} />
             </div>              
-            <p
-              className="blog-post-content"
+            <div
+              className="blog-post__content"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </div>

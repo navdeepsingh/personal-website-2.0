@@ -290,6 +290,14 @@ section {
         background: $red;
         padding: 0.5em;
     }
+
+    &__content {
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
 }
 
 @keyframes glowing {
