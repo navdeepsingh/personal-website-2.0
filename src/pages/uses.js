@@ -1,9 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 
 const Uses = () => {
     return (        
         <Layout>
+            <Helmet>
+                <title>Navdeep Singh - Uses</title>
+                <meta name="description" content="Information about gears I used regularly." />
+                <meta property="og:type" content="website" />
+            </Helmet> 
             <section className="uses">
                 <div className="uses-introduction">
                     <h1>Uses</h1>

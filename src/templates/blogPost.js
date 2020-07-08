@@ -9,8 +9,8 @@ export default function Template({ data, pageContext }) {
   
   return (
     <Layout>
-      <section className="blog">
-        <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />        
+      <Helmet title={`Blog - ${post.frontmatter.title}`} /> 
+      <section className="blog">               
           <div className="blog-post">            
             <h1>{post.frontmatter.title}</h1>
             <div className="blog-post__date">Published On: {post.frontmatter.date}</div>

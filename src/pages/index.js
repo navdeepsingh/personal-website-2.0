@@ -6,7 +6,7 @@ const Home = () => {
     return (        
         <Layout>
             <Helmet>
-                <title>Navdeep Singh 👳 - Full Stack Developer</title>
+                <title>Navdeep Singh - Full Stack Developer</title>
                 <meta name="description" content="Welcome to my personal website." />
                 <meta property="og:type" content="website" />
             </Helmet> 
