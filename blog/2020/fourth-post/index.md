@@ -22,3 +22,5 @@ tag: life
 * Planning for AWS Certified Developer - Associate and AWS Certified DevOps Engineer- Professional Certification
 * Complete my Nodejs Learning.
 * Develop some cool projects using Raspberry Pi.
+
+![Google I/O - May 7](/assets/CA_BTR_WF_Slice_02.png)
