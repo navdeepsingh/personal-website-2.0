@@ -2,12 +2,13 @@
     --main-text-width-wide: 900px;
 
     --text-size-base: 24px;
-    --text-size-xlarge: 5rem;
-    --text-size-default: 1rem;
-    --text-size-large: 1.5rem;
-    --text-size-small: 0.75rem;
-    --text-size-xsmall: 0.58rem;
-    --text-size-medium: 1.25rem;
+    --text-size-xlarge: 3em;
+    --text-size-large: 1.5em;
+    --text-size-default: 1em;    
+    --text-size-medium: 0.8em;    
+    --text-size-small: 0.7em;
+    --text-size-xsmall: 0.58em;
+    
 }
 
 @import "reset.sass";
@@ -221,7 +222,7 @@ section {
             ul {
                 padding-top: 0.8em;
                 li {
-                    font-size: var(--text-size-default);
+                    font-size: var(--text-size-small);
                     padding-bottom: 0.8em;
                     display: flex;                    
 
@@ -272,6 +273,7 @@ section {
     margin-bottom: 0.8em;
     h1 {
         font-size: 1.5em;
+        line-height: 1.4em;
     }
 
     &__banner {
@@ -293,9 +295,28 @@ section {
 
     &__content {
         img {
-            width: 100%;
+            width: 50%;
             object-fit: cover;
             object-position: center center;
+            margin: 0 auto;
+            display: block;
+        }
+
+        ul {
+            list-style: disc;
+        }
+
+        ol {
+            list-style: decimal;
+        }                   
+
+        ul, ol {
+            padding-left: 25px;
+            
+            li {
+                line-height: 1.4em;
+                padding-bottom: 0.8em;
+            }
         }
     }
 }
@@ -304,6 +325,21 @@ section {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+button {
+    &.back {
+        padding: 0.2em 0.5em;
+        font-size: 0.8em;
+        border: 1px solid darken(white, 20%);
+        margin-bottom: 1.2em;
+        cursor: pointer;
+        @include box-shadow();
+
+        &:hover {
+            @include box-shadow-hover(darken(white, 30));
+        }
+    }
 }
 
 @include mobile {
@@ -338,9 +374,14 @@ section {
 
     h1 {
         font-size: var(--text-size-large);
+        &.tag-header {
+            font-size: var(--text-size-large);
+        }
     }
 
-    .home {
+    section.home {
+        padding: 60px 0.8em 100px 0.8em;
+
         p {
             font-size: var(--text-size-medium);
         }
@@ -354,6 +395,16 @@ section {
         &-listing {
             > div {
                 flex-basis: 100%;
+            }
+        }
+    }
+
+
+    .blog-post {
+
+        &__content {
+            img {
+                width: 100%;
             }
         }
     }

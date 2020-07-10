@@ -11,7 +11,8 @@ export default function Template({ data, pageContext }) {
     <Layout>
       <Helmet title={`Blog - ${post.frontmatter.title}`} /> 
       <section className="blog">               
-          <div className="blog-post">            
+          <div className="single blog-post">
+            <button title="Go Back to Previous Page" className="back" onClick={() => {window.history.go(-1); return false;}}>Back</button>            
             <h1>{post.frontmatter.title}</h1>
             <div className="blog-post__date">Published On: {post.frontmatter.date}</div>
             <div className="blog-post__tag">#{post.frontmatter.tag}</div>                

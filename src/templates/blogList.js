@@ -25,20 +25,22 @@ export default class BlogList extends React.Component {
               }
               </ul>
             </div>
-          {posts
-            .filter(post => post.node.frontmatter.title.length > 0)
-            .map(({ node: post }) => {
-              return (
-                <div className="blog-post" key={post.id}>
-                  <h1>
-                    <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-                  </h1>
-                  <div className="blog-post__date">Published On: {post.frontmatter.date}</div>
-                  <div className="blog-post__tag">#{post.frontmatter.tag}</div>                
-                  <p>{post.excerpt}</p>
-                </div>
-              )
-            })}
+            <div className="blog-listing">
+              {posts
+                .filter(post => post.node.frontmatter.title.length > 0)
+                .map(({ node: post }) => {
+                  return (
+                    <div className="blog-post" key={post.id}>
+                      <h1>
+                        <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+                      </h1>
+                      <div className="blog-post__date">Published On: {post.frontmatter.date}</div>
+                      <div className="blog-post__tag">#{post.frontmatter.tag}</div>                
+                      <p>{post.excerpt}</p>
+                    </div>
+                  )
+                })}
+            </div>
             <div className="pagination">
               <div>
                 {prev && <Link to={`${prev}`} rel="prev"> ← Last </Link>}
