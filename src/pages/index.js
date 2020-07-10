@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 const Home = () => {    
     return (        
@@ -45,7 +46,27 @@ const Home = () => {
                 <div>
                     <p>Interested in relocating me abroad?<br />
                     Feel free to contact me!</p>
-                    <a href="https://drive.google.com/file/d/1HIIKPcry61fri8OjUPotTgVqAX_AJ_R-/view?usp=sharing" target="_blank" rel="noreferrer" className="glow-on-hover">View my resume</a>
+                    <button 
+                        title=""                         
+                        className="glow-on-hover"
+                        onClick={e => {
+                            e.preventDefault();
+                            trackCustomEvent({
+                                // string - required - The object that was interacted with (e.g.video)
+                                category: "Resume Link",
+                                // string - required - Type of interaction (e.g. 'play')
+                                action: "Click",
+                                // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+                                label: "Resume Click Tracking",
+                                // number - optional - Numeric value associated with the event. (e.g. A product ID)
+                                value: 43
+                              })
+                            window.open('https://drive.google.com/file/d/1HIIKPcry61fri8OjUPotTgVqAX_AJ_R-/view?usp=sharing')  
+                        }}
+                    >
+                        View my resume
+                    </button>
+
                 </div>
             </section>
         </Layout> 
