@@ -2,7 +2,7 @@
     --main-text-width-wide: 900px;
 
     --text-size-base: 24px;
-    --text-size-xlarge: 3em;
+    --text-size-xlarge: 2.5em;
     --text-size-large: 1.5em;
     --text-size-default: 1em;    
     --text-size-medium: 0.8em;    
@@ -28,7 +28,7 @@ body {
     background-color: $base;
     font-size: var(--text-size-base);
     font-family: Raleway, sans-serif;
-    color: $cyan;
+    color: white;
     position: relative;
     
     &::before {
@@ -56,7 +56,8 @@ body {
 
 h1 {
     font-size: var(--text-size-xlarge);
-    font-family: "ArchivoBlack", Arial, Helvetica, sans-serif;
+    font-family: Raleway;
+    font-weight: 800;
     color: $yellow;
 
     &.tag-header {
@@ -100,15 +101,18 @@ a {
     position: relative;
     z-index: 0;
     display: inline-block;
-    background-color: #111;
+    background-color: transparent;
     padding: 0.5em 0.8em;
-    color: #fff;
+    color: $base;
     font-size: var(--text-size-default);
     cursor: pointer;
+    border-radius: 10px;
     font-family: Raleway, sans-serif;
+    
 
     &::before{
         content: '';
+        border-radius: 10px;
         background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
         position: absolute;
         top: -2px;
@@ -129,9 +133,10 @@ a {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: #111;
+        background: $yellow;
         left: 0;
         top: 0;
+        border-radius: 10px;
     }
 
     &:hover {
@@ -159,7 +164,16 @@ section {
         padding: 0;
         justify-content: center;
         align-items: flex-start;
-        flex-direction: column; 
+        flex-direction: column;
+
+        > div {
+            padding-bottom: 0.8em;
+        }
+        
+        h2 {
+            font-weight: 700;
+            padding-bottom: 0.5em;
+        }
     }
 }
 
@@ -173,6 +187,10 @@ section {
     li {
         text-align: right;
         padding-bottom: 1em;
+
+        a {
+            color: $yellow;
+        }
     }    
     
 }
@@ -331,6 +349,10 @@ section {
 }
 
 button {
+    &.resume {
+        text-transform: uppercase;
+    }
+    
     &.back {
         padding: 0.2em 0.5em;
         font-size: 0.8em;

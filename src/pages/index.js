@@ -12,15 +12,13 @@ const Home = () => {
                 <meta property="og:type" content="website" />
             </Helmet> 
             <section className="home">
-                <div className="introduction">
-                    <h1>Navdeep Singh</h1>
+                <div className="introduction" id="main">
+                    <h1>NAVDEEP SINGH</h1>
                     <p>I’m a full stack developer and a self-taught front end developer living in Amritsar, India. 
                         I am passionate about modern technologies, performance, accessibility and writing things down.</p>
                 </div>
                 <div>
-                    <p>
-                        My skillset and interests includes:
-                    </p>
+                    <h2>My skillset and interests includes:</h2>
                     <ul className="skills">
                         <li><span>HTML5</span>,</li>
                         <li><span>CSS3</span>,</li>
@@ -48,7 +46,7 @@ const Home = () => {
                     Feel free to contact me!</p>
                     <button 
                         title=""                         
-                        className="glow-on-hover"
+                        className="glow-on-hover resume"
                         onClick={e => {
                             e.preventDefault();
                             trackCustomEvent({
