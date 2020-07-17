@@ -393,8 +393,14 @@ button {
         }
     }
 
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
     section {
-       padding: 60px 0.8em 100px 0.8em; 
+       padding: 100px 0.8em 100px 0.8em; 
     }
 
     h1 {
@@ -405,7 +411,7 @@ button {
     }
 
     section.home {
-        padding: 60px 0.8em 100px 0.8em;
+        padding: 100px 0.8em 100px 0.8em; 
 
         p {
             font-size: var(--text-size-medium);
