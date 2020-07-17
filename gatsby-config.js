@@ -12,7 +12,32 @@ const netlifyCmsPaths = {
 
 module.exports = {
   // previous setup
-  plugins: [    
+  plugins: [  
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Navdeep Singh - Full Stack Developer`,
+        short_name: `Navdeep Singh`,
+        description: `This website is the personal virtual space of Navdeep Singh where he share his learnings and announcements, rather its general, life or technical.`,
+        start_url: `/`,
+        background_color: `#153649`,
+        theme_color: `#153649`,
+        display: `standalone`,
+        icon: `favicons/nav-logo-192x192.png`, // This path is relative to the root of the site.
+        icons: [
+          {
+            src: `/favicons/nav-logo-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `/favicons/nav-logo-512x512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
+      },
+    },  
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

@@ -59,7 +59,7 @@ const Home = () => {
                                 // number - optional - Numeric value associated with the event. (e.g. A product ID)
                                 value: 43
                               })
-                            window.open('https://drive.google.com/file/d/1HIIKPcry61fri8OjUPotTgVqAX_AJ_R-/view?usp=sharing')  
+                            window.open('https://drive.google.com/file/d/1IL7EALovjBL5e3k8Q48GBiCJIsarQj3T/view?usp=sharing')  
                         }}
                     >
                         View my resume

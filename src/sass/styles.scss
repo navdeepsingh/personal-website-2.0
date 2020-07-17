@@ -71,6 +71,11 @@ p {
     padding-top: 0.5em;
     padding-bottom: 0.8em;
     line-height: 1.4em;
+    word-break: break-word;
+}
+
+strong {
+    font-weight: 800;
 }
 
 a {
@@ -352,18 +357,19 @@ button {
     &.resume {
         text-transform: uppercase;
     }
-    
-    &.back {
-        padding: 0.2em 0.5em;
-        font-size: 0.8em;
-        border: 1px solid darken(white, 20%);
-        margin-bottom: 1.2em;
-        cursor: pointer;
-        @include box-shadow();
+}
 
-        &:hover {
-            @include box-shadow-hover(darken(white, 30));
-        }
+.back {
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    border: 1px solid darken(white, 20%);
+    margin-bottom: 1.2em;
+    cursor: pointer;
+    display: inline-block;
+    @include box-shadow();
+
+    &:hover {
+        @include box-shadow-hover(darken(white, 30));
     }
 }
 
