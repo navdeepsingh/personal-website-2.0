@@ -47,7 +47,6 @@ export const pageQuery = graphql`
     }
     site: site {
       host
-      port
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
