@@ -6,13 +6,13 @@
 const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
-      cmsConfig: `/static/admin/config.yml`,
+    cmsConfig: `/static/admin/config.yml`,
   },
 }
 
 module.exports = {
   // previous setup
-  plugins: [  
+  plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -37,7 +37,7 @@ module.exports = {
           },
         ],
       },
-    },  
+    },
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
@@ -51,14 +51,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-                maxWidth: 1026,
-                linkImagesToOriginal: true,
+              maxWidth: 1026,
+              linkImagesToOriginal: true,
             },
           },
           {
             resolve: `gatsby-plugin-netlify-cms`,
             options: {
-                enableIdentityWidget: true,
+              enableIdentityWidget: true,
             },
           },
           {
@@ -84,7 +84,7 @@ module.exports = {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-128599461-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true
+        head: true,
       },
     },
   ],

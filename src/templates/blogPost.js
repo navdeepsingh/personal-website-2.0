@@ -5,11 +5,16 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 export default function Template({ data, pageContext }) {
-  const { markdownRemark: post, bannerImage: banner } = data
+  const { markdownRemark: post, bannerImage: banner, site } = data
   
   return (
     <Layout>
-      <Helmet title={`Blog - ${post.frontmatter.title}`} /> 
+      <Helmet>
+        <title>{`Blog - ${post.frontmatter.title}`}</title>
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta property="og:url" content={site.host + post.frontmatter.path} />
+        <meta property="og:image" content={post.frontmatter.thumbnail.publicURL} />
+      </Helmet>
       <section className="blog">               
           <div className="single blog-post">
             <Link to={`blog`} className="back" title="Go Back to Previous Page">Back</Link>          
@@ -40,6 +45,10 @@ export const pageQuery = graphql`
         }
       }
     }
+    site: site {
+      host
+      port
+    }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -49,6 +58,7 @@ export const pageQuery = graphql`
           publicURL
         }
         tag
+        path
       }
     }
   }
