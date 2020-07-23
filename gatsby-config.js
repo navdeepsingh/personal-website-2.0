@@ -11,6 +11,12 @@ const netlifyCmsPaths = {
 }
 
 module.exports = {
+  siteMetadata: {
+    title: 'Navdeep Singh - Full Stack Developer',
+    description: 'This website is the personal virtual space of Navdeep Singh where he share his learnings and announcements, rather its general, life or technical.',
+    author: '@nswebstudio',
+    siteURL: 'https://navdeepsingh.in',
+  },
   // previous setup
   plugins: [
     {
