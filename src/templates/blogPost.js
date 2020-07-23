@@ -12,6 +12,7 @@ export default function Template({ data, pageContext }) {
       <Helmet>
         <title>{`Blog - ${post.frontmatter.title}`}</title>
         <meta property="og:title" content={post.frontmatter.title} />
+        <meta property="og:description" content={post.frontmatter.excerpt} />
         <meta property="og:url" content={site.siteMetadata.siteURL + post.frontmatter.path} />
         <meta property="og:image" content={site.siteMetadata.siteURL + post.frontmatter.thumbnail.publicURL} />
       </Helmet>
@@ -52,7 +53,8 @@ export const pageQuery = graphql`
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-      frontmatter {
+      excerpt(pruneLength: 250)
+      frontmatter {        
         date(formatString: "MMMM DD, YYYY")
         title
         thumbnail {
