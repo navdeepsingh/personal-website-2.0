@@ -13,7 +13,7 @@ export default function Template({ data, pageContext }) {
         <title>{`Blog - ${post.frontmatter.title}`}</title>
         <meta property="og:title" content={post.frontmatter.title} />
         <meta property="og:url" content={site.siteMetadata.siteURL + post.frontmatter.path} />
-        <meta property="og:image" content={post.frontmatter.thumbnail.publicURL} />
+        <meta property="og:image" content={site.siteMetadata.siteURL + post.frontmatter.thumbnail.publicURL} />
       </Helmet>
       <section className="blog">               
           <div className="single blog-post">
