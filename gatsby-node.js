@@ -13,20 +13,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 2000
       ) {
-            edges {
-                node {
-                    id
-                    frontmatter {
-                      date
-                      path
-                      title
-                      thumbnail {                        
-                        publicURL
-                      }
-                    }
-                }
+        edges {
+          node {
+            id
+            frontmatter {
+              date
+              path
+              title
+              thumbnail {
+                publicURL
+              }
             }
+          }
         }
+      }
       tags: allMarkdownRemark {
         distinct(field: frontmatter___tag)
       }
@@ -38,9 +38,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  
   const blogPosts = result.data.postsRemark.edges
-  const postsPerPage = 3;
+  const postsPerPage = 10
   const numPages = Math.ceil(blogPosts.length / postsPerPage)
 
   // Make blog list pages with pagination
@@ -53,19 +52,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
-        prev: i === 0 ? null : (i === 1 ? `/blog` : `/blog/${i}`),
-        next: i === numPages-1 ? null : `/blog/${i + 2}`,
+        prev: i === 0 ? null : i === 1 ? `/blog` : `/blog/${i}`,
+        next: i === numPages - 1 ? null : `/blog/${i + 2}`,
       },
     })
   })
 
   // Make blog posts pages
-  blogPosts.forEach(({node}) => {
+  blogPosts.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
       context: {
-        bannerImage: node.frontmatter.thumbnail.publicURL 
+        bannerImage: node.frontmatter.thumbnail.publicURL,
       }, // additional data can be passed via context
     })
   })

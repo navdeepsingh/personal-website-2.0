@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./header"
+import ProfilePicChanger from "./profilePicChanger"
 import "../sass/styles.scss"
 
 const Layout = ({ children }) => {
@@ -10,7 +11,7 @@ const Layout = ({ children }) => {
       </main>
       <Header />
       <aside>
-        <h2 className="title">Remote Web Developer</h2>
+        <ProfilePicChanger />
         <a href="mailto:navdeep.er@gmail.com" className="contact">
           navdeep.er@gmail.com
         </a>
