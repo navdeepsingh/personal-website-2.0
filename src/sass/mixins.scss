@@ -4,51 +4,128 @@ $screen-md: 768px;
 $screen-sm: 320px;
 
 @mixin mobile {
-    @media (max-width: $screen-md - 1) {
-        @content;
-    }
+  @media (max-width: $screen-md - 1) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
-        @content;
-    }
+  @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+    @content;
+  }
 }
 
 @mixin large-desktop {
-    @media (min-width: $screen-xl) {
-        @content;
-    }
+  @media (min-width: $screen-xl) {
+    @content;
+  }
 }
 
 @mixin small-desktop {
-    @media (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
-        @content;
-    }
+  @media (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: $screen-lg) {
-        @content;
-    }
+  @media (min-width: $screen-lg) {
+    @content;
+  }
 }
 
 @mixin mobile-or-tablet {
-    @media (max-width: $screen-lg - 1) {
-        @content;
-    }
+  @media (max-width: $screen-lg - 1) {
+    @content;
+  }
 }
 
 @mixin tablet-or-desktop {
-    @media (min-width: $screen-md) {
-        @content;
-    }
+  @media (min-width: $screen-md) {
+    @content;
+  }
 }
 
 @mixin box-shadow() {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 @mixin box-shadow-hover($color: black) {
-    box-shadow: 0 14px 28px rgba($color,0.25), 0 10px 10px rgba($color,0.22);
+  box-shadow: 0 14px 28px rgba($color, 0.25), 0 10px 10px rgba($color, 0.22);
+}
+
+@mixin profile-pic-changer(
+  $profile-width,
+  $profile-selector-width,
+  $profile-border-width
+) {
+  .display-profile {
+    position: absolute;
+    width: $profile-width;
+    top: 30px;
+    left: 30px;
+
+    .profile-pics {
+      position: relative;
+      width: $profile-width;
+      height: $profile-width;
+      border-radius: 50%;
+      border: $profile-border-width solid rgba(255, 255, 255, 0.1);
+
+      .gatsby-image-wrapper {
+        position: absolute !important;
+        z-index: -1;
+        opacity: 0;
+        width: $profile-width !important;
+        height: $profile-width !important;
+
+        &.active {
+          z-index: 1;
+          opacity: 1;
+          transition: all 300ms ease-out;
+        }
+
+        img {
+          border-radius: 50%;
+          transition: all 10ms ease-in;
+        }
+      }
+    }
+
+    button {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: -15px;
+      left: calc(
+        ((100% - #{$profile-selector-width}) / 2) + #{$profile-border-width}
+      );
+      text-align: center;
+      width: $profile-selector-width;
+      height: $profile-selector-width;
+      background: white;
+      border-radius: 50%;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        background: lightgrey;
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      &:hover {
+        &:before {
+          background: darken(lightgrey, 10%);
+        }
+      }
+
+      img {
+        z-index: 2;
+      }
+    }
+  }
 }
