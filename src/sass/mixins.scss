@@ -62,7 +62,7 @@ $screen-sm: 320px;
     position: absolute;
     width: $profile-width;
     top: 30px;
-    left: 30px;
+    left: 10px;
 
     .profile-pics {
       position: relative;
@@ -96,16 +96,20 @@ $screen-sm: 320px;
       display: flex;
       justify-content: center;
       align-items: center;
-      bottom: -15px;
+      bottom: calc(
+        (-#{$profile-selector-width} / 2) + #{$profile-border-width}
+      );
       left: calc(
         ((100% - #{$profile-selector-width}) / 2) + #{$profile-border-width}
       );
       text-align: center;
       width: $profile-selector-width;
       height: $profile-selector-width;
-      background: white;
+      background: $base;
       border-radius: 50%;
+      border: none;
       z-index: 1;
+      margin: 0;
 
       &:before {
         content: "";
@@ -125,6 +129,7 @@ $screen-sm: 320px;
 
       img {
         z-index: 2;
+        object-fit: contain !important;
       }
     }
   }

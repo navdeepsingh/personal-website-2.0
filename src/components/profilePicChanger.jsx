@@ -58,6 +58,13 @@ const ProfilePicChanger = () => (
             }
           }
         }
+        camera: file(relativePath: { eq: "camera.png" }) {
+          childImageSharp {
+            fixed(quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -79,9 +86,9 @@ const ProfilePicChanger = () => (
           title="Keep clicking here to change profile pictures"
           onClick={handleClick}
         >
-          <img
-            src="https://img.icons8.com/android/15/000000/camera.png"
-            alt="Camera"
+          <Img
+            fixed={data.camera.childImageSharp.fixed}
+            alt="Change Profile Pic"
           />
         </button>
       </div>

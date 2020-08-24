@@ -29,6 +29,7 @@ body {
   font-family: Raleway, sans-serif;
   color: white;
   position: relative;
+  height: 100%;
 
   &::before {
     content: "";
@@ -177,6 +178,10 @@ section {
     align-items: flex-start;
     flex-direction: column;
 
+    @include mobile-or-tablet {
+      display: block;
+    }
+
     > div {
       padding-bottom: 0.8em;
     }
@@ -236,8 +241,8 @@ section {
 }
 
 // Profile Pic Changer
-$profile-width: 250px;
-$profile-selector-width: 30px;
+$profile-width: 200px;
+$profile-selector-width: 40px;
 $profile-border-width: 15px;
 
 @include profile-pic-changer(
@@ -246,9 +251,9 @@ $profile-border-width: 15px;
   $profile-border-width
 );
 
-@include mobile {
+@include mobile-or-tablet {
   $profile-width: 100px;
-  $profile-selector-width: 20px;
+  $profile-selector-width: 25px;
   $profile-border-width: 5px;
   @include profile-pic-changer(
     $profile-width,
@@ -405,7 +410,7 @@ button {
   }
 }
 
-@include mobile {
+@include mobile-or-tablet {
   $profile-width: 100px;
   $profile-selector-width: 30px;
   $profile-border-width: 5px;
@@ -442,7 +447,7 @@ button {
   }
 
   section {
-    padding: 100px 0.8em 100px 0.8em;
+    padding: 180px 0.8em 100px 0.8em;
   }
 
   h1 {
@@ -453,7 +458,7 @@ button {
   }
 
   section.home {
-    padding: 100px 0.8em 100px 0.8em;
+    padding: 180px 0.8em 100px 0.8em;
 
     p {
       font-size: var(--text-size-medium);
