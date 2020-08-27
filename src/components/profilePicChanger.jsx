@@ -25,42 +25,42 @@ const ProfilePicChanger = () => (
       query {
         pic1: file(relativePath: { eq: "pic1.jpg" }) {
           childImageSharp {
-            fixed(quality: 100) {
+            fixed(width: 300, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }
         }
         pic2: file(relativePath: { eq: "pic2.jpg" }) {
           childImageSharp {
-            fixed(quality: 100) {
+            fixed(width: 300, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }
         }
         pic3: file(relativePath: { eq: "pic3.jpg" }) {
           childImageSharp {
-            fixed(quality: 100) {
+            fixed(width: 300, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }
         }
         pic4: file(relativePath: { eq: "pic4.jpg" }) {
           childImageSharp {
-            fixed(quality: 100) {
+            fixed(width: 300, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }
         }
         pic5: file(relativePath: { eq: "pic5.jpg" }) {
           childImageSharp {
-            fixed(quality: 100) {
+            fixed(width: 300, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }
         }
         camera: file(relativePath: { eq: "camera.png" }) {
           childImageSharp {
-            fixed(quality: 100) {
+            fixed(width: 15, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }

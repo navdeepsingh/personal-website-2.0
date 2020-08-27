@@ -27,6 +27,7 @@ body {
   background-color: $base;
   font-size: var(--text-size-base);
   font-family: Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
   color: white;
   position: relative;
   height: 100%;
