@@ -1,6 +1,6 @@
 ---
 path: /blog/the-futuristic-advanced-php-part1
-title: "The Futuristic Advanced PHP "
+title: The Futuristic Advanced PHP - Part 1
 date: 2020-08-26T11:21:44.104Z
 thumbnail: php7-features.jpg
 tag: technical
