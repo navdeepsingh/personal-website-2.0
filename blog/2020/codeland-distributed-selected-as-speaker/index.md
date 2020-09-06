@@ -2,7 +2,7 @@
 path: /blog/codeland-distributed-selected-as-speaker
 title: "Codeland DISTRIBUTED: Selected as Speaker"
 date: 2020-07-17T07:34:59.492Z
-thumbnail: navdeep-singh-codelandspeaker.png
+thumbnail: navdeep-singh-codelandspeaker.jpg
 tag: technical
 ---
 Super excited to announce on social media that I am selected as a Speaker in Codeland DISTRIBUTED Conference - the meeting spot for programmers and their peers on 24th July 2020.\
