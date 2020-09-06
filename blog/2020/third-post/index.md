@@ -2,7 +2,7 @@
 path: /blog/dream-in-years-plan-in-months-evaluate-in-weeks-ship-daily
 title: Dream in Years. Plan in Months. Evaluate in Weeks. Ship Daily.
 date: 2018-09-09T12:11:00.000Z
-thumbnail: gmws-certificate.png
+thumbnail: gmws-certificate.jpg
 tag: life
 ---
 In today’s world, we obsessed with learning all stuff at all time. But in a real case, this is not straightforward. Let me share with you my journey how I nailed down Google Mobile Web Specialist Certification in 4 months.
@@ -50,11 +50,11 @@ Meanwhile, Learning day by day from their detailed Video Tutorials and Quizzes i
 
 I overjoyed again with Certificate and my knowledge of various technical aspects that make me Graduate from Udacity’s Nanodegree.
 
-![UDACITY Nanodegree: Mobile Web Specialist](udacity-mws-certificate.png "UDACITY Nanodegree: Mobile Web Specialist")
+![UDACITY Nanodegree: Mobile Web Specialist](udacity-mws-certificate.jpg "UDACITY Nanodegree: Mobile Web Specialist")
 
 And then after waiting for about 45 days. I got an email with the subject line ‘Congratulations, you are now a Google Certified Mobile Web Specialist!’ And I got my badge and certificate as below and available online.
 
-![Google Certified: Mobile Web Specialist ](gmws-certificate.png "Google Certified: Mobile Web Specialist")
+![Google Certified: Mobile Web Specialist ](gmws-certificate.jpg "Google Certified: Mobile Web Specialist")
 
 # Knowledge and Experience Attained
 

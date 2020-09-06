@@ -13,7 +13,7 @@ tag: technical
 
 Demo: https://master.d30av2lsib94wx.amplifyapp.com/<br> Email: test@test.com<br> Password: test123<br>
 
-![QRCode App using Reactjs & Lumen](screen-shot-2020-07-10-at-5.08.51-pm.png "QRCode App using Reactjs & Lumen")
+![QRCode App using Reactjs & Lumen](screen-shot-2020-07-10-at-5.08.51-pm.jpg "QRCode App using Reactjs & Lumen")
 
 <p>For this I used separate folders to differentiate between front end and back end (api calls). Front end is developed using Reactjs and can be deployed in AWS Amplify ( I recommend ), or you have other options like Heroku, Netlify, Zeit and can deploy in EC2 instance of AWS. It’s truly depends on personal choice and available resources.</p>
 
