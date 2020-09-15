@@ -262,8 +262,6 @@ $profile-border-width: 15px;
   );
 }
 
-//############## About Styles ###############/
-
 //############## Uses Styles ###############/
 .uses {
   &-listing {
@@ -330,6 +328,23 @@ $profile-border-width: 15px;
   h1 {
     font-size: 1.5em;
     line-height: 1.4em;
+    transition: all .35s ease-in-out;
+    transform-origin: 0;
+    display: inline-block;
+    border-bottom: 4px dotted $green;
+
+    &:focus,&:hover {
+      transform: scale(1.02);      
+      
+    }
+
+    a{
+      &:hover {
+        text-decoration: none;
+        
+      }
+    }
+    
   }
 
   &__banner {
@@ -414,6 +429,48 @@ $profile-border-width: 15px;
   }
 }
 
+.pagination {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    position: relative;
+
+    &.next {  
+      padding-right: 35px;
+      justify-self: flex-end;
+
+      &:hover::after{
+        right: 0px;
+      }
+
+      &:after{
+        content: "\2192";        
+        transition: all .35s ease-in-out;
+        position: absolute;
+        display: inline-block;
+        right: 5px;
+      }
+    }
+
+    &.prev {
+      padding-left: 35px;
+
+      &:hover::before{
+        left: 0px;
+      }
+
+      &:before{
+        content: "\2190";        
+        transition: all .35s ease-in-out;
+        position: absolute;
+        display: inline-block;
+        left: 5px;
+      }
+    }
+  }
+  
+}
 @keyframes glowing {
   0% {
     background-position: 0 0;

@@ -51,23 +51,16 @@ export default class BlogList extends React.Component {
               })}
           </div>
           <div className="pagination">
-            <div>
-              {prev && (
-                <Link to={`${prev}`} rel="prev">
-                  {" "}
-                  ← Last{" "}
-                </Link>
-              )}
-            </div>
-
-            <div style={{ justifySelf: "flex-end" }}>
-              {next && (
-                <Link to={`${next}`} rel="next">
-                  {" "}
-                  Next →{" "}
-                </Link>
-              )}
-            </div>
+            {prev && (
+              <Link to={`${prev}`} class="prev" rel="prev">
+                Previous
+              </Link>
+            )}
+            {next && (
+              <Link to={`${next}`} class="next" rel="next">
+                Next
+              </Link>
+            )}
           </div>
         </section>
       </Layout>
