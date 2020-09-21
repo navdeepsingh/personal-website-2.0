@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default class BlogList extends React.Component {
+
   render() {
     const { edges: posts } = this.props.data.allMarkdownRemark
     const { group: tags } = this.props.data.tags
@@ -22,7 +23,7 @@ export default class BlogList extends React.Component {
               {tags.map((tag, index) => {
                 return (
                   <li key={index}>
-                    <Link to={`tags/${tag.fieldValue}`}>#{tag.fieldValue}</Link>
+                    <Link to={`tags/${tag.fieldValue}`} className={tag.fieldValue}>#{tag.fieldValue}</Link>
                   </li>
                 )
               })}

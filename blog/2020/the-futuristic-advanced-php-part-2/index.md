@@ -8,29 +8,30 @@ tag: technical
 In this series on **What's New in PHP 7,** we first discussed about major features of the latest PHP version 7+. And now in this second post, I will list down major *improvements.*
 
 1. Arrays as constants
-
-   `define('APP_DIRS', array('app', 'incl', 'lib'));`
+   ```php
+   define('APP_DIRS', array('app', 'incl', 'lib'));
 2. Unicode codepoint Escape Syntax
 
    * Requires double-quoted string + escape syntax
-   * `"\u{ codepoint }"`
+   * ```php 
+      "\u{ codepoint }"
 3. Uniform variable syntax
+   ```javascript
+   $name = 'car';
+   $car = array('name' => 'BMW', 'year' => 2014);
 
-    `$name = 'car';`\
-    `$car = array('name' => 'BMW', 'year' => 2014);`
-
-   ` echo $$name['name']; `\
-   `// PHP 5: Warning: Illegal string offset 'name'`\
-   `// PHP 7: BMW`
+   echo $$name['name'];
+   // PHP 5: Warning: Illegal string offset 'name'
+   // PHP 7: BMW`
 
 4. Grouped imports with use()
+   ```php
+   require_once('constants.php');
+   require_once('database.php');
+   require_once('plurals.php');
 
-   `require_once('constants.php);`\
-   `require_once('database.php);`\
-   `require_once('plurals.php);`
-
-    `// PHP 7`\
-    `use App\Library\{Constants, Database as DB, Plurals}`
+   // PHP 7`\
+   use App\Library\{Constants, Database as DB, Plurals}`
 
 
 

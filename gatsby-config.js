@@ -54,6 +54,13 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: 'carbon',
+              theme: 'blackboard'
+            }
+          },
           netlifyCmsPaths,
           {
             resolve: `gatsby-remark-images`,

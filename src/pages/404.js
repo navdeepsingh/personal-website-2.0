@@ -12,7 +12,7 @@ const NotFound = () => {
             </Helmet>
             <section className="home">
                 <div className="introduction" id="main">
-                    <h1>404: Page Not Found</h1>
+                    <h1>404: This was probably a mistake.</h1>
                 </div>
             </section>
         </Layout>

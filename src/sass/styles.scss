@@ -305,13 +305,34 @@ $profile-border-width: 15px;
 
     a {
       display: block;
-      color: $red;
       padding: 0.5em;
+      color: $red;
+      border-radius: 30px;
+      background-color: darken($color: $red, $amount: 20);
+      color: lighten($color: $red, $amount: 50);
       @include box-shadow();
 
+      &.general {
+        background-color: darken($color: $yellow, $amount: 20); 
+
+        &:hover {
+          color: lighten($color: $yellow, $amount: 50);        
+          @include box-shadow-hover($yellow);
+        }
+      }
+
+      &.life {
+        background-color: darken($color: $green, $amount: 40);
+
+        &:hover {
+          color: lighten($color: $green, $amount: 50);        
+          @include box-shadow-hover($green);
+        }
+      }
+
       &:hover {
-        color: lighten($color: $red, $amount: 20);
         text-decoration: none;
+        color: lighten($color: $red, $amount: 50);        
         @include box-shadow-hover($red);
       }
     }
@@ -327,21 +348,18 @@ $profile-border-width: 15px;
   margin-bottom: 0.8em;
   h1 {
     font-size: 1.5em;
-    line-height: 1.4em;
-    transition: all .35s ease-in-out;
-    transform-origin: 0;
-    display: inline-block;
-    border-bottom: 4px dotted $green;
-
-    &:focus,&:hover {
-      transform: scale(1.02);      
-      
-    }
+    line-height: 1.4em;    
+    
 
     a{
+      display: inline-block;
+      transform-origin: 0;    
+      transition: all .35s ease-in-out;
+      border-bottom: 4px dotted $green;      
+
       &:hover {
-        text-decoration: none;
-        
+        text-decoration: none; 
+        transform: scale(1.02);         
       }
     }
     

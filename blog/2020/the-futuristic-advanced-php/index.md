@@ -43,10 +43,17 @@ The greatest benefits of seventh version are enhanced site speed and much better
 
    * ??
    * Returns first value that exists and is not NULL
+   ```php
+   // PHP 7
+   echo $name ?? 'John Doe';
+   // PHP 5
+   echo isset($name) ? $name : 'John Doe';
+
+
 6. #### Anonymous Classes
 
    * Define and instantiate class immediately with one line of code.
-   * ```
+   * ```php
      new class { ... }
-     ```
+     
    * Useful for "throw-away" classes   `
