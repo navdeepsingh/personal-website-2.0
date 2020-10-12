@@ -13,10 +13,13 @@
 @import "colors.scss";
 @import "mixins.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 @font-face {
   font-family: "Karla";
   src: url("../fonts/Karla-Regular.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "ArchivoBlack";
   src: url("../fonts/ArchivoBlack-Regular.ttf") format("truetype");
@@ -25,7 +28,7 @@
 body {
   background-color: $base;
   font-size: var(--text-size-base);
-  font-family: Raleway, sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: white;
   position: relative;
@@ -56,7 +59,7 @@ body {
 
 h1 {
   font-size: var(--text-size-xlarge);
-  font-family: Raleway;
+  font-family: 'ArchivoBlack', 'Raleway', sans-serif;
   font-weight: 800;
   color: $yellow;
 
@@ -227,7 +230,7 @@ section {
 .skills {
   color: white;
   line-height: 1.4em;
-  font-family: "Karla";
+  font-family: "Raleway", sans-serif;
 
   li {
     display: inline-block;
@@ -250,6 +253,17 @@ $profile-border-width: 15px;
   $profile-selector-width,
   $profile-border-width
 );
+
+@include small-desktop {
+  $profile-width: 150px;
+  $profile-selector-width: 25px;
+  $profile-border-width: 5px;
+  @include profile-pic-changer(
+    $profile-width,
+    $profile-selector-width,
+    $profile-border-width
+  );
+}
 
 @include mobile-or-tablet {
   $profile-width: 100px;

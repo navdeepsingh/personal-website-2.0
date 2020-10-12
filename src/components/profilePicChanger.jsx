@@ -11,7 +11,6 @@ const handleClick = () => {
   counter = profilePics.length - 1 === counter ? 0 : counter + 1
   profilePics.forEach((profilePic, index) => {
     if (counter === index) {
-      console.log(counter, index)
       profilePic.classList.add("active")
     } else {
       profilePic.classList.remove("active")
