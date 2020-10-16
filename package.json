@@ -14,7 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@bit/navdeepsingh.react-components.day-night-switcher": "^1.0.0",
     "@deckdeckgo/highlight-code": "^2.1.0",
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.11",
