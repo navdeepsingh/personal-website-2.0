@@ -1,29 +1,46 @@
-import React from "react"
+import React, {useState} from "react"
 import Header from "./header"
 import ProfilePicChanger from "./profilePicChanger"
+import classNames from "classnames";
 import "../sass/styles.scss";
 
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 deckDeckGoHighlightElement();
 
 
-export default class Layout extends React.Component {
+const Layout = (props) => {
 
-  render() {
-    return (
-      <>
-        <main>
-          <div className="body">{this.props.children}</div>
-        </main>
-        <Header />
-        <aside>
-          <ProfilePicChanger />
-          <a href="mailto:navdeep.er@gmail.com" className="contact">
-            navdeep.er@gmail.com
-        </a>
-        </aside>
-      </>
-    )
+  const [theme, setTheme] = useState('dark');
+  const toggleTheme = () => {
+    if (theme === 'dark') {
+      setTheme('bright');      
+    } else {
+      setTheme('dark');
+    }
   }
 
+  const bodyClass = classNames({
+    container: true,
+    bright: theme === 'bright'
+  })
+
+  return (
+    <div className={bodyClass}>
+      <main>
+        <div className="body">{props.children}</div>
+      </main>
+      <Header
+        mode={theme}
+        themeSwitcher={toggleTheme}
+       />
+      <aside>
+        <ProfilePicChanger />
+        <a href="mailto:navdeep.er@gmail.com" className="contact">
+          navdeep.er@gmail.com
+      </a>
+      </aside>
+    </div>
+  )
 }
+
+export default Layout;

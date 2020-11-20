@@ -27,11 +27,9 @@
 }
 
 body {
-  background-color: $base;
   font-size: var(--text-size-base);
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: white;
   position: relative;
   height: 100%;
 
@@ -55,6 +53,40 @@ body {
     background-image: radial-gradient($yellow 40%, transparent 0%);
     background-size: 5px 5px;
     bottom: 0;
+  }
+}
+
+.container{
+  background-color: $base;
+  color: white;
+
+  &.bright {
+    background-color: white;
+    color: $base;
+
+    h1 {
+      color: $base;
+    }
+
+    p {
+      color: $base;
+    }
+
+    .skills span{
+      color: $invert-color;
+    }
+
+    a{
+      color: $invert-color;
+    }
+
+    .glow-on-hover{
+      color: white;
+
+      &::after{
+        background-color: $invert-color;
+      }
+    }
   }
 }
 

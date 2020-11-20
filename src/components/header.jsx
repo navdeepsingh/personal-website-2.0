@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import DayNightSwitcher from '@bit/navdeepsingh.react-components.ui.day-night-switcher';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <nav aria-label="Primary">
             <ul className="links">
@@ -13,6 +14,12 @@ const Header = () => {
                 </li>                
                 <li>
                     <Link to={'/uses'}>Uses</Link>
+                </li>
+                <li>
+                    <DayNightSwitcher 
+                        mode={props.mode}
+                        themeSwitcher={props.themeSwitcher}
+                     />
                 </li>
             </ul>
         </nav>
