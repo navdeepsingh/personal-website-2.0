@@ -1,22 +1,24 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-let counter = 0
+let counter = 0;
 
 const handleClick = () => {
+  // eslint-disable-next-line no-undef
+  const { document } = window;
   const profilePics = document.querySelectorAll(
-    ".profile-pics .gatsby-image-wrapper"
-  )
-  counter = profilePics.length - 1 === counter ? 0 : counter + 1
+    '.profile-pics .gatsby-image-wrapper'
+  );
+  counter = profilePics.length - 1 === counter ? 0 : counter + 1;
   profilePics.forEach((profilePic, index) => {
     if (counter === index) {
-      profilePic.classList.add("active")
+      profilePic.classList.add('active');
     } else {
-      profilePic.classList.remove("active")
+      profilePic.classList.remove('active');
     }
-  })
-}
+  });
+};
 
 const ProfilePicChanger = () => (
   <StaticQuery
@@ -66,7 +68,7 @@ const ProfilePicChanger = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div className="display-profile">
         <div className="profile-pics">
           <Img
@@ -93,6 +95,6 @@ const ProfilePicChanger = () => (
       </div>
     )}
   />
-)
+);
 
-export default ProfilePicChanger
+export default ProfilePicChanger;
