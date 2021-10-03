@@ -10,6 +10,15 @@ const netlifyCmsPaths = {
   },
 }
 
+const gatsbyRequiredRules = path.join(
+  process.cwd(),
+  "node_modules",
+  "gatsby",
+  "dist",
+  "utils",
+  "eslint-rules"
+)
+
 module.exports = {
   siteMetadata: {
     title: "Navdeep Singh - Full Stack Developer",
@@ -57,9 +66,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
-              terminal: 'carbon',
-              theme: 'blackboard'
-            }
+              terminal: "carbon",
+              theme: "blackboard",
+            },
           },
           netlifyCmsPaths,
           {
@@ -106,6 +115,19 @@ module.exports = {
         trackingId: "UA-128599461-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        // Gatsby required rules directory
+        rulePaths: [gatsbyRequiredRules],
+        // Default settings that may be ommitted or customized
+        stages: ["develop"],
+        extensions: ["js", "jsx", "ts", "tsx"],
+        exclude: ["node_modules", "bower_components", ".cache", "public"],
+        // Any additional eslint-webpack-plugin options below
+        // ...
       },
     },
   ],
