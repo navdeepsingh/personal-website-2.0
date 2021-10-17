@@ -15,4 +15,20 @@ Afterwards, the author discussed Duality of Mind and categorised the conscious m
 
 The First analogy is to assume your Mind as a Garden, soil as your subconscious mind, every day with our habitual thinking we keep sowing seeds in it. If we sow seeds like good actions, good thinking, equality, right actions then one can harvest glorious reaps. 
 
-![Sow good seeds on your subscscious mind soil and reap glorious harvests.](subconsciousmind.jpg)
+![Sow good seeds on your subconscious mind soil and reap glorious harvests.](subconsciousmind.jpg)
+
+The author termed thought as a cause and condition as effect. In order to change the external conditions, you must change the cause. Moreover, your subconscious mind is sensitive to your thoughts. The subconscious mind is reactive and responsive to your nature of thoughts whereas the conscious mind is meek.
+
+Another analogy, take Conscious mind as the Captain of the ship, and Subconscious mind is like Enginemen at the Engine room, they don't aware of navigation, guests, management, etc. they are just recepients of orders from Captain.\
+\
+Sequence Diagram be like this:\
+You -> Conscious mind -> Subconscious mind\
+\
+Also, the author reiterates 10 points to carry out the treasure from within you, I abled to recalled six 😁:
+
+1. Treasure house is within.
+2. Subconscious mind has all answers to your problems.
+3. Subconscious mind builder of your health.
+4. Thought is a cause and condition is an effect.
+5. Never use words like "I can't" - the Subconscious mind takes it as a note.
+6. Change your thoughts change your destiny
