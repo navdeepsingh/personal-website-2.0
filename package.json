@@ -1,8 +1,8 @@
 {
   "name": "Navdeep-Singh-Gatsby-Powered-Website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "Gatsby powered Static Site Generated website with React Components",
+  "version": "0.2.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -14,7 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@bit/navdeepsingh.react-components.ui.day-night-switcher": "^1.0.2",
     "@deckdeckgo/highlight-code": "^2.1.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.21.37",

@@ -1,29 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
-import DayNightSwitcher from '@bit/navdeepsingh.react-components.ui.day-night-switcher';
+// import DayNightSwitcher from '@bit/navdeepsingh.react-components.ui.day-night-switcher';
 
-const Header = (props) => {
-    return (
-        <nav aria-label="Primary">
-            <ul className="links">
-                <li>
-                    <Link to={'/'}>About</Link>
-                </li>                
-                <li>
-                    <Link to={'/blog'}>Blog</Link>
-                </li>                
-                <li>
-                    <Link to={'/uses'}>Uses</Link>
-                </li>
-                <li>
-                    <DayNightSwitcher 
-                        mode={props.mode}
-                        themeSwitcher={props.themeSwitcher}
-                     />
-                </li>
-            </ul>
-        </nav>
-    )
+const Header = props => {
+  return (
+    <nav aria-label="Primary">
+      <ul className="links">
+        <li>
+          <Link to={"/"}>About</Link>
+        </li>
+        <li>
+          <Link to={"/blog"}>Blog</Link>
+        </li>
+        <li>
+          <Link to={"/uses"}>Uses</Link>
+        </li>
+      </ul>
+    </nav>
+  )
 }
 
-export default Header;
+export default Header
