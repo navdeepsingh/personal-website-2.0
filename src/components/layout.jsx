@@ -1,27 +1,25 @@
-import React, {useState} from "react"
-import Header from "./header"
-import ProfilePicChanger from "./profilePicChanger"
-import classNames from "classnames";
-import "../sass/styles.scss";
+import React, { useState } from "react"
+import Header from "./Header"
+import ProfilePicChanger from "./ProfilePicChanger"
+import classNames from "classnames"
+import "../sass/styles.scss"
 
-import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-deckDeckGoHighlightElement();
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+deckDeckGoHighlightElement()
 
-
-const Layout = (props) => {
-
-  const [theme, setTheme] = useState('dark');
+const Layout = props => {
+  const [theme, setTheme] = useState("dark")
   const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('bright');      
+    if (theme === "dark") {
+      setTheme("bright")
     } else {
-      setTheme('dark');
+      setTheme("dark")
     }
   }
 
   const bodyClass = classNames({
     container: true,
-    bright: theme === 'bright'
+    bright: theme === "bright",
   })
 
   return (
@@ -29,18 +27,15 @@ const Layout = (props) => {
       <main>
         <div className="body">{props.children}</div>
       </main>
-      <Header
-        mode={theme}
-        themeSwitcher={toggleTheme}
-       />
+      <Header mode={theme} themeSwitcher={toggleTheme} />
       <aside>
         <ProfilePicChanger />
         <a href="mailto:navdeep.er@gmail.com" className="contact">
           navdeep.er@gmail.com
-      </a>
+        </a>
       </aside>
     </div>
   )
 }
 
-export default Layout;
+export default Layout
