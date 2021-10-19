@@ -13,7 +13,7 @@ const useLocalStorage = (key, initialValue) => {
   const setValue = value => {
     try {
       setStoredValue(value)
-      !window.localStorage.setItem(key, JSON.stringify(value))
+      window.localStorage.setItem(key, JSON.stringify(value))
     } catch (error) {
       console.log(error)
     }
