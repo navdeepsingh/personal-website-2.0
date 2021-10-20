@@ -5,6 +5,7 @@ import classNames from "classnames"
 import "../sass/styles.scss"
 
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+import { CounterProvider } from "../context/CounterContext"
 deckDeckGoHighlightElement()
 
 const Layout = props => {
@@ -29,7 +30,9 @@ const Layout = props => {
       </main>
       <Header mode={theme} themeSwitcher={toggleTheme} />
       <aside>
-        <ProfilePicChanger />
+        <CounterProvider>
+          <ProfilePicChanger />
+        </CounterProvider>
         <a href="mailto:navdeep.er@gmail.com" className="contact">
           navdeep.er@gmail.com
         </a>
