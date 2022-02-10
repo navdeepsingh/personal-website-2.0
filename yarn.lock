@@ -934,11 +934,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bit/navdeepsingh.react-components.ui.day-night-switcher@^1.0.2":
-  version "1.0.2"
-  resolved "https://node.bit.dev/navdeepsingh.react-components.ui.day-night-switcher/-/navdeepsingh.react-components.ui.day-night-switcher-1.0.2.tgz#a8c46fc27ef3475f74e0522497e4422707ff58c7"
-  integrity sha1-qMRvwn7zR1904FIkl+RCJwf/WMc=
-
 "@deckdeckgo/highlight-code@^2.1.0":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@deckdeckgo/highlight-code/-/highlight-code-2.1.1.tgz#58545b14a9cc077acf4c2f5e93d682e0730439f4"
@@ -3978,6 +3973,11 @@ constants-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
   integrity sha1-wguW2MYXdIqvHBYCF2DNJ/y4y3U=
+
+constate@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/constate/-/constate-3.3.0.tgz#3961f552ab1bec2a9d0d56c9bc1d6bcde407357b"
+  integrity sha512-mRjWH2J4D3Rq6XAuEhoGUkBWrBLUNbiYr/Rp4M/MEEp+LN0vctQS3EAw/6bxlnDy59T+UrAEU9Tg136Dfp6ytg==
 
 contains-path@^0.1.0:
   version "0.1.0"
@@ -15183,9 +15183,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
+  integrity sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==
 
 uglify-js@3.4.x:
   version "3.4.10"
