@@ -105,7 +105,7 @@ const Home = () => {
                 value: 43,
               })
               window.open(
-                "https://drive.google.com/file/d/1IL7EALovjBL5e3k8Q48GBiCJIsarQj3T/view?usp=sharing"
+                "https://drive.google.com/file/d/1X4YyJfE6NjGd-De7nnW6sSUyl5mmueIC/view?usp=sharing"
               )
             }}
           >
